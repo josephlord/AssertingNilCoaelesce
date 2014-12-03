@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		BEA433551A2F330800733831 /* AssertingNilCoaelesce.h in Headers */ = {isa = PBXBuildFile; fileRef = BEA433541A2F330800733831 /* AssertingNilCoaelesce.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEA4335B1A2F330800733831 /* AssertingNilCoaelesce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA4334F1A2F330800733831 /* AssertingNilCoaelesce.framework */; };
-		BEA433621A2F330800733831 /* AssertingNilCoaelesceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA433611A2F330800733831 /* AssertingNilCoaelesceTests.swift */; };
+		BEA4336C1A2F331C00733831 /* AssertingNilCoaelesce.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4336B1A2F331C00733831 /* AssertingNilCoaelesce.swift */; };
+		BEA4336E1A2F335300733831 /* AssertingNilCoalesceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4336D1A2F335300733831 /* AssertingNilCoalesceTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,8 @@
 		BEA433541A2F330800733831 /* AssertingNilCoaelesce.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssertingNilCoaelesce.h; sourceTree = "<group>"; };
 		BEA4335A1A2F330800733831 /* AssertingNilCoaelesceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssertingNilCoaelesceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA433601A2F330800733831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEA433611A2F330800733831 /* AssertingNilCoaelesceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertingNilCoaelesceTests.swift; sourceTree = "<group>"; };
+		BEA4336B1A2F331C00733831 /* AssertingNilCoaelesce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertingNilCoaelesce.swift; sourceTree = "<group>"; };
+		BEA4336D1A2F335300733831 /* AssertingNilCoalesceTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssertingNilCoalesceTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		BEA433511A2F330800733831 /* AssertingNilCoaelesce */ = {
 			isa = PBXGroup;
 			children = (
+				BEA4336B1A2F331C00733831 /* AssertingNilCoaelesce.swift */,
 				BEA433541A2F330800733831 /* AssertingNilCoaelesce.h */,
 				BEA433521A2F330800733831 /* Supporting Files */,
 			);
@@ -88,7 +91,7 @@
 		BEA4335E1A2F330800733831 /* AssertingNilCoaelesceTests */ = {
 			isa = PBXGroup;
 			children = (
-				BEA433611A2F330800733831 /* AssertingNilCoaelesceTests.swift */,
+				BEA4336D1A2F335300733831 /* AssertingNilCoalesceTestCase.swift */,
 				BEA4335F1A2F330800733831 /* Supporting Files */,
 			);
 			path = AssertingNilCoaelesceTests;
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA4336C1A2F331C00733831 /* AssertingNilCoaelesce.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEA433621A2F330800733831 /* AssertingNilCoaelesceTests.swift in Sources */,
+				BEA4336E1A2F335300733831 /* AssertingNilCoalesceTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +272,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -306,6 +311,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -315,6 +321,7 @@
 		BEA433661A2F330800733831 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -324,14 +331,17 @@
 				INFOPLIST_FILE = AssertingNilCoaelesce/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		BEA433671A2F330800733831 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -397,6 +407,7 @@
 				BEA433671A2F330800733831 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEA433681A2F330800733831 /* Build configuration list for PBXNativeTarget "AssertingNilCoaelesceTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +416,7 @@
 				BEA4336A1A2F330800733831 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
